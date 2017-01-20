@@ -1,11 +1,26 @@
-base-files (9.7+rpi1) stretch-staging; urgency=medium
+base-files (9.8+rpi1) stretch-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
   * Modify maintainer scripts so default will be set to raspbian even when
     upgrading
 
- -- Raspbian forward porter <root@raspbian.org>  Sun, 04 Dec 2016 00:32:10 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 20 Jan 2017 02:26:54 +0000
+
+base-files (9.8) unstable; urgency=medium
+
+  * Release candidate for stretch as stable:
+  - Use "9" as version in /etc/issue and /etc/issue.net.
+    (never expected to change after stretch is released)
+  - Use 9.0 as version in /etc/debian_version.
+    (expected to change at every point release)
+  - Change PRETTY_NAME in /usr/lib/os-release, adding 9 as version number
+    and "(stretch)" as codename. Add also VERSION_ID and VERSION.
+    (never expected to change)
+  - Update README (stretch -> buster).
+  * Standards-Version: 3.9.8 (no special changes for this).
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 15 Jan 2017 23:00:02 +0100
 
 base-files (9.7) unstable; urgency=medium
 

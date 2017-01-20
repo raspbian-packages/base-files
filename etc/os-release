@@ -1,5 +1,7 @@
-PRETTY_NAME="Raspbian #OSNAME# stretch/sid"
+PRETTY_NAME="Raspbian #OSNAME# 9 (stretch)"
 NAME="Raspbian #OSNAME#"
+VERSION_ID="9"
+VERSION="9 (stretch)"
 ID=raspbian
 ID_LIKE=debian
 HOME_URL="http://www.raspbian.org/"
