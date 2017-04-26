@@ -1,0 +1,9 @@
+PRETTY_NAME="Raspbian #OSNAME# 9 (stretch)"
+NAME="Raspbian #OSNAME#"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=raspbian
+ID_LIKE=debian
+HOME_URL="http://www.raspbian.org/"
+SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
