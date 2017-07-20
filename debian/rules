@@ -13,7 +13,16 @@ VENDORFILE = raspbian
 %:
 	dh $@
 
+override_dh_auto_clean:
+	dh_auto_clean
+	sed -i s/Raspbian/Debian/ etc/issue
+	sed -i s/Raspbian/Debian/ etc/issue.net
+	sed -i s/Raspbian/Debian/ etc/os-release
+
 override_dh_auto_build:
+	sed -i s/Debian/Raspbian/ etc/issue
+	sed -i s/Debian/Raspbian/ etc/issue.net
+	sed -i s/Debian/Raspbian/ etc/os-release
 	sh debian/check-md5sum-etc profile
 	sed -e "s&#OSNAME#&$(OSNAME)&g" debian/copyright.in > debian/copyright
 	sed -e "s/#VENDORFILE#/$(VENDORFILE)/g" debian/postinst.in > debian/postinst

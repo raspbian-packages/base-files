@@ -1,9 +1,7 @@
-PRETTY_NAME="Raspbian #OSNAME# 9 (stretch)"
-NAME="Raspbian #OSNAME#"
-VERSION_ID="9"
-VERSION="9 (stretch)"
+PRETTY_NAME="Debian #OSNAME# buster/sid"
+NAME="Debian #OSNAME#"
 ID=raspbian
 ID_LIKE=debian
 HOME_URL="http://www.raspbian.org/"
-SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
-BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+SUPPORT_URL="http://www.raspbian.org/DebianForums"
+BUG_REPORT_URL="http://www.raspbian.org/DebianBugs"
