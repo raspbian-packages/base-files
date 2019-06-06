@@ -14,16 +14,7 @@ DESTDIR = debian/base-files
 %:
 	dh $@
 
-override_dh_auto_clean:
-	dh_auto_clean
-	sed -i s/Raspbian/Debian/ etc/issue
-	sed -i s/Raspbian/Debian/ etc/issue.net
-	sed -i s/Raspbian/Debian/ etc/os-release
-
 override_dh_auto_build:
-	sed -i s/Debian/Raspbian/ etc/issue
-	sed -i s/Debian/Raspbian/ etc/issue.net
-	sed -i s/Debian/Raspbian/ etc/os-release
 	sh debian/check-md5sum-etc profile
 	sed -e "s&#OSNAME#&$(OSNAME)&g" debian/copyright.in > debian/copyright
 	sed -e "s/#VENDORFILE#/$(VENDORFILE)/g" debian/postinst.in > debian/postinst
@@ -42,6 +33,15 @@ endif
 	sed -e "s&#OSNAME#&$(OSNAME)&g" etc/issue      > $(DESTDIR)/etc/issue
 	sed -e "s&#OSNAME#&$(OSNAME)&g" etc/issue.net  > $(DESTDIR)/etc/issue.net
 	sed -e "s&#OSNAME#&$(OSNAME)&g" etc/os-release > $(DESTDIR)/etc/os-release
+	sed -i s/Debian/Raspbian/ $(DESTDIR)/etc/issue
+	sed -i s/Debian/Raspbian/ $(DESTDIR)/etc/issue.net
+	sed -i s/Debian/Raspbian/ $(DESTDIR)/etc/os-release
+	egrep -v '^(ID|HOME_URL|SUPPORT_URL|BUG_REPORT_URL)' $(DESTDIR)/etc/os-release | sponge $(DESTDIR)/etc/os-release
+	echo 'ID=raspbian' >> $(DESTDIR)/etc/os-release
+	echo 'ID_LIKE=debian' >> $(DESTDIR)/etc/os-release
+	echo 'HOME_URL="http://www.raspbian.org/"' >> $(DESTDIR)/etc/os-release
+	echo 'SUPPORT_URL="http://www.raspbian.org/RaspbianForums"' >> $(DESTDIR)/etc/os-release
+	echo 'BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"' >> $(DESTDIR)/etc/os-release
 	mv $(DESTDIR)/etc/os-release $(DESTDIR)/usr/lib/os-release
 	ln -s ../usr/lib/os-release $(DESTDIR)/etc/os-release
 

@@ -1,4 +1,4 @@
-base-files (10.1+rpi1) buster-staging; urgency=medium
+base-files (10.3+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -7,8 +7,39 @@ base-files (10.1+rpi1) buster-staging; urgency=medium
   [changes introduced in 10+rpi1 by Peter Michael Green]
   * Make some changes using sed in debian/rules rather than directly in source
     package to avoid merge conflicts.
+  [changes introduced in 10.3+rpi1 by Peter Michael Green]
+  * Make further changes in debian/rules rather than directly to files in
+    package to further avoid merge conflicts.
+  * Make changes in debian/rules in the "install" step to avoid the need for
+    code to revert them.
+  * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Wed, 24 Jan 2018 07:50:05 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Thu, 06 Jun 2019 15:42:15 +0000
+
+base-files (10.3) unstable; urgency=medium
+
+  * Add Breaks: debian-security-support (<< 2019.04.25). Closes: #928172.
+    This is the first version of debian-security-support which does not break
+    when /etc/debian_version contains a string in the form "10.x".
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 13 May 2019 22:25:32 +0200
+
+base-files (10.2) unstable; urgency=medium
+
+  * Release candidate for buster as stable:
+  - Use "10" as version in /etc/issue and /etc/issue.net.
+    (never expected to change after buster is released)
+  - Use 10.0 as version in /etc/debian_version.
+    (expected to change at every point release)
+  - Change PRETTY_NAME in /usr/lib/os-release, adding 10 as version number
+    and "(buster)" as codename. Add also VERSION_ID and VERSION.
+    (never expected to change)
+  - Add VERSION_CODENAME to os-release. Closes: #829245. This is optional
+    according to the specs but some people find it useful. Please note that
+    for now this is only expected to be present on stable releases.
+  - Update README (buster -> bullseye).
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 19 Apr 2019 13:05:00 +0200
 
 base-files (10.1) unstable; urgency=medium
 
