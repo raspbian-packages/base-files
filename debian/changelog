@@ -1,4 +1,4 @@
-base-files (10.3+rpi1) buster-staging; urgency=medium
+base-files (11+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,16 @@ base-files (10.3+rpi1) buster-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Thu, 06 Jun 2019 15:42:15 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 18 Jul 2019 01:28:08 +0000
+
+base-files (11) unstable; urgency=medium
+
+  * Change issue, issue.net, debian_version and os-release to read
+    "bullseye/sid".
+  * Drop VERSION, VERSION_ID and CODENAME from os-release.
+  * Make "mesg n" silent in default /root/.profile. Closes: #930654.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 09 Jul 2019 12:05:50 +0200
 
 base-files (10.3) unstable; urgency=medium
 

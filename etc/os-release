@@ -1,8 +1,5 @@
-PRETTY_NAME="Debian #OSNAME# 10 (buster)"
+PRETTY_NAME="Debian #OSNAME# bullseye/sid"
 NAME="Debian #OSNAME#"
-VERSION_ID="10"
-VERSION="10 (buster)"
-VERSION_CODENAME=buster
 ID=debian
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
