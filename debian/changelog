@@ -1,4 +1,4 @@
-base-files (10.3+rpi1+deb10u2) buster-staging; urgency=medium
+base-files (10.3+rpi1+deb10u3) buster-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,13 @@ base-files (10.3+rpi1+deb10u2) buster-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Tue, 19 Nov 2019 08:13:24 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 09 Feb 2020 02:47:44 +0000
+
+base-files (10.3+deb10u3) buster; urgency=medium
+
+  * Change /etc/debian_version to 10.3, for Debian 10.3 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 01 Feb 2020 18:09:26 +0100
 
 base-files (10.3+deb10u2) buster; urgency=medium
 
