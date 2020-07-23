@@ -1,11 +1,23 @@
-base-files (9.9+rpi1+deb9u11) stretch-staging; urgency=medium
+base-files (9.9+rpi1+deb9u13) stretch-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
   * Modify maintainer scripts so default will be set to raspbian even when
     upgrading
 
- -- Peter Michael Green <plugwash@raspbian.org>  Mon, 09 Sep 2019 23:20:47 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 23 Jul 2020 19:38:09 +0000
+
+base-files (9.9+deb9u13) stretch; urgency=medium
+
+  * Change /etc/debian_version to 9.13, for Debian 9.13 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 10 Jul 2020 23:05:00 +0200
+
+base-files (9.9+deb9u12) stretch; urgency=medium
+
+  * Change /etc/debian_version to 9.12, for Debian 9.12 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 01 Feb 2020 18:09:04 +0100
 
 base-files (9.9+deb9u11) stretch; urgency=emergency
 
