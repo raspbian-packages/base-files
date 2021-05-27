@@ -3,7 +3,7 @@ Section: admin
 Priority: required
 Maintainer: Santiago Vila <sanvila@debian.org>
 Standards-Version: 4.1.3
-Build-Depends: debhelper (>= 9), moreutils
+Build-Depends: debhelper-compat (= 13), moreutils
 
 Package: base-files
 Provides: base
