@@ -1,4 +1,4 @@
-base-files (12+rpi1) bookworm-staging; urgency=medium
+base-files (12.2+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,21 @@ base-files (12+rpi1) bookworm-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 28 Aug 2021 18:32:16 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Tue, 15 Feb 2022 20:21:05 +0000
+
+base-files (12.2) unstable; urgency=medium
+
+  * A simplified version of the patch for DPKG_ROOT was applied, but the
+    simplification went too far and was incorrect. Closes: #824594.
+  * Use $() instead of `` when calling md5sum.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 19 Jan 2022 23:35:00 +0100
+
+base-files (12.1) unstable; urgency=medium
+
+  * Add support for DPKG_ROOT to postinst. Closes: #824594
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 19 Jan 2022 22:40:00 +0100
 
 base-files (12) unstable; urgency=medium
 
