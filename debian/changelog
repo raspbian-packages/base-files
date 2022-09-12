@@ -1,4 +1,4 @@
-base-files (11.1+rpi1+deb11u4) bullseye-staging; urgency=medium
+base-files (11.1+rpi1+deb11u5) bullseye-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,13 @@ base-files (11.1+rpi1+deb11u4) bullseye-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 13 Jul 2022 13:50:13 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 12 Sep 2022 00:26:22 +0000
+
+base-files (11.1+deb11u5) bullseye; urgency=medium
+
+  * Change /etc/debian_version to 11.5, for Debian 11.5 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 03 Sep 2022 14:10:00 +0200
 
 base-files (11.1+deb11u4) bullseye; urgency=medium
 
