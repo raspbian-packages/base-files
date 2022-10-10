@@ -1,4 +1,4 @@
-base-files (12.2+rpi1) bookworm-staging; urgency=medium
+base-files (12.3+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,18 @@ base-files (12.2+rpi1) bookworm-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Tue, 15 Feb 2022 20:21:05 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 10 Oct 2022 02:09:26 +0000
+
+base-files (12.3) unstable; urgency=high
+
+  * Add VERSION_CODENAME to /etc/os-release. Closes: #1008735.
+    This still respects the fact that Debian distributions do not have
+    a version number until they are actually released as stable, but makes
+    /etc/os-release a little bit more useful for those who use testing as
+    a pre-release for the next stable. Those users are also the reason why
+    in this case we are simply using the string "bookworm".
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 03 Oct 2022 23:30:00 +0200
 
 base-files (12.2) unstable; urgency=medium
 
