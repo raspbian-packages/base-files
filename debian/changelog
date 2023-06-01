@@ -1,4 +1,4 @@
-base-files (12.3+rpi1) bookworm-staging; urgency=medium
+base-files (12.4+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,33 @@ base-files (12.3+rpi1) bookworm-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Mon, 10 Oct 2022 02:09:26 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 01 Jun 2023 21:09:32 +0000
+
+base-files (12.4) unstable; urgency=medium
+
+  * Release candidate for bookworm as stable:
+  - Use "12" as version in /etc/issue and /etc/issue.net.
+    (never expected to change after release)
+  - Use 12.0 as version in /etc/debian_version.
+    (expected to change at every point release)
+  - Change PRETTY_NAME in /usr/lib/os-release, adding 12 as version number
+    and "(bookworm)" as codename. Add also VERSION_ID and VERSION.
+    (never expected to change)
+  - Variable VERSION_CODENAME was already defined as "bookworm".
+  - Update README (bookworm -> trixie).
+  * Refresh GFDL-1.2, GFDL-1.3, GPL-3, LGPL-2 and LGPL-3 from their
+    canonical place at https://ftp.gnu.org/gnu/Licenses/ as they have
+    minor editorial changes like trimming spaces, https, etc.
+  * Drop debian/current-md5sums-obsolete. Closes: #1009358.
+  * Ship a real debian/copyright file in source package instead of
+    generating it at build time.
+  * Call dh_installchangelogs using --no-trim option.
+    Add versioned build-dependency on debhelper for the above.
+  * Update lintian-overrides to new format.
+  * Rules-Requires-Root: binary-targets.
+  * Update standards version to 4.6.2.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 02 Mar 2023 14:55:00 +0100
 
 base-files (12.3) unstable; urgency=high
 

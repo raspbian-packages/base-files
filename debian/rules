@@ -16,7 +16,6 @@ DESTDIR = debian/base-files
 
 override_dh_auto_build:
 	sh debian/check-md5sum-etc profile
-	sed -e "s&#OSNAME#&$(OSNAME)&g" debian/copyright.in > debian/copyright
 	sed -e "s/#VENDORFILE#/$(VENDORFILE)/g" debian/postinst.in > debian/postinst
 
 override_dh_auto_install:
@@ -44,6 +43,9 @@ endif
 	echo 'BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"' >> $(DESTDIR)/etc/os-release
 	mv $(DESTDIR)/etc/os-release $(DESTDIR)/usr/lib/os-release
 	ln -s ../usr/lib/os-release $(DESTDIR)/etc/os-release
+
+override_dh_installchangelogs:
+	dh_installchangelogs --no-trim
 
 override_dh_link:
 	dh_link -X os-release
