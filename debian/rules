@@ -14,9 +14,11 @@ DESTDIR = debian/base-files
 %:
 	dh $@
 
+execute_after_dh_clean:
+	sh debian/timestamps
+
 override_dh_auto_build:
 	sh debian/check-md5sum-etc profile
-	sed -e "s/#VENDORFILE#/$(VENDORFILE)/g" debian/postinst.in > debian/postinst
 
 override_dh_auto_install:
 	install -p -m 644 etc/*      $(DESTDIR)/etc
@@ -60,3 +62,6 @@ override_dh_fixperms:
 	cd debian/base-files && chmod 1777 `cat ../1777-dirs`
 	cd debian/base-files && chmod 2775 `cat ../2775-dirs`
 	cd debian/base-files && chmod 700 root
+
+override_dh_installdeb:
+	dh_installdeb -DVENDORFILE=$(VENDORFILE)

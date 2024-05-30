@@ -83,6 +83,7 @@ if [ "$1" = "configure" ] && [ "$2" = "" ]; then
   install_local_dir /usr/local/bin
   install_local_dir /usr/local/games
   install_local_dir /usr/local/lib
+  install_local_dir /usr/local/libexec
   install_local_dir /usr/local/include
   install_local_dir /usr/local/sbin
   install_local_dir /usr/local/src
@@ -106,3 +107,5 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
     install_directory mnt 755 root
   fi
 fi
+
+#DEBHELPER#

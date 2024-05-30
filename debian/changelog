@@ -1,4 +1,4 @@
-base-files (13+rpi1) trixie-staging; urgency=medium
+base-files (13.2+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,28 @@ base-files (13+rpi1) trixie-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Sun, 17 Sep 2023 18:46:01 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 30 May 2024 23:07:39 +0000
+
+base-files (13.2) unstable; urgency=medium
+
+  * Document that /etc/profile is not a conffile anymore. Closes: #868095.
+  * Use a regexp to source files in /etc/profile.d. The behaviour should now be
+    well defined and consistent. Closes: #885414, #1069279.
+  * Add NEWS.Debian entry for the above.
+  * Document that the default umask is defined in /etc/login.defs. Closes: #983606.
+  * Add #DEBHELPER# token to postinst to make lintian happy.
+  * Make binary package to be git-reproducible.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 03 May 2024 18:15:00 +0200
+
+base-files (13.1) unstable; urgency=medium
+
+  * Rename postinst.in to postinst. Use dh_installdeb token feature instead.
+  * Add /usr/local/libexec. Closes: #994220.
+  * Machine-readable copyright file. Closes: #1020828.
+  * Add a debian/gbp.conf file.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 17 Apr 2024 12:45:00 +0200
 
 base-files (13) unstable; urgency=medium
 
