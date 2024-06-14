@@ -1,4 +1,4 @@
-base-files (13.2+rpi1) trixie-staging; urgency=medium
+base-files (13.3+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,14 @@ base-files (13.2+rpi1) trixie-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 30 May 2024 23:07:39 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 14 Jun 2024 10:20:53 +0000
+
+base-files (13.3) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * DEP17: Install /usr-merge aliasing symlinks. Closes: #1064459.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 06 Jun 2024 00:35:00 +0200
 
 base-files (13.2) unstable; urgency=medium
 
