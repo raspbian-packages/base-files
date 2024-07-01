@@ -1,4 +1,4 @@
-base-files (12.4+rpi1+deb12u1) bookworm-staging; urgency=medium
+base-files (12.4+rpi1+deb12u6) bookworm-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,37 @@ base-files (12.4+rpi1+deb12u1) bookworm-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 29 Jul 2023 06:05:24 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 01 Jul 2024 02:23:09 +0000
+
+base-files (12.4+deb12u6) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.6, for Debian 12.6 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 29 Mar 2024 18:20:00 +0100
+
+base-files (12.4+deb12u5) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.5, for Debian 12.5 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 28 Jan 2024 22:20:00 +0100
+
+base-files (12.4+deb12u4) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.4, for Debian 12.4 point release.
+
+ -- Adam D Barratt <adam@adam-barratt.org.uk>  Sat, 09 Dec 2023 21:08:29 +0000
+
+base-files (12.4+deb12u3) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.3, for Debian 12.3 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 02 Dec 2023 23:34:00 +0100
+
+base-files (12.4+deb12u2) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.2, for Debian 12.2 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 29 Sep 2023 22:04:00 +0200
 
 base-files (12.4+deb12u1) bookworm; urgency=medium
 
