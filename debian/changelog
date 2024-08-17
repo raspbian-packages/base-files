@@ -1,4 +1,4 @@
-base-files (13.3+rpi1) trixie-staging; urgency=medium
+base-files (13.5+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,27 @@ base-files (13.3+rpi1) trixie-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 14 Jun 2024 10:20:53 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sat, 17 Aug 2024 22:04:52 +0000
+
+base-files (13.5) unstable; urgency=medium
+
+  [ Chris Hofstaedtler ]
+  * Fix typo in preinst: lib64 -> libx32. Closes: #1077863.
+  [ Helmut Grohne ]
+  * Work around /lib64 link created by systemd-nspawn. Closes: #1077866.
+  [ Santiago Vila ]
+  * Add lintian overrides for the directories that have become symlinks.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 04 Aug 2024 23:30:00 +0200
+
+base-files (13.4) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Tighten the merged-/usr preinst check. Closes: #1076491.
+  [ Santiago Vila ]
+  * Raise Standards-Version to 4.7.0.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 01 Aug 2024 12:30:00 +0200
 
 base-files (13.3) unstable; urgency=medium
 
