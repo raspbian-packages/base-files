@@ -1,4 +1,4 @@
-base-files (12.4+rpi1+deb12u8) bookworm-staging; urgency=medium
+base-files (12.4+rpi1+deb12u9) bookworm-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,13 @@ base-files (12.4+rpi1+deb12u8) bookworm-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Tue, 12 Nov 2024 12:29:02 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sat, 11 Jan 2025 18:14:39 +0000
+
+base-files (12.4+deb12u9) bookworm; urgency=medium
+
+  * Change /etc/debian_version to 12.9, for Debian 12.9 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 31 Dec 2024 11:25:00 +0100
 
 base-files (12.4+deb12u8) bookworm; urgency=medium
 
