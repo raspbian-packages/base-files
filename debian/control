@@ -4,7 +4,9 @@ Priority: required
 Maintainer: Santiago Vila <sanvila@debian.org>
 Standards-Version: 4.7.2
 Build-Depends: debhelper-compat (= 13), debhelper (>= 13.10~), moreutils
-Rules-Requires-Root: binary-targets
+Vcs-Git: https://salsa.debian.org/sanvila/base-files.git
+Vcs-Browser: https://salsa.debian.org/sanvila/base-files
+Rules-Requires-Root: no
 
 Package: base-files
 Provides: base, usr-is-merged

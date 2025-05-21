@@ -1,4 +1,4 @@
-base-files (13.7+rpi1) trixie-staging; urgency=medium
+base-files (13.8+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,28 @@ base-files (13.7+rpi1) trixie-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 12 Mar 2025 02:04:29 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 21 May 2025 16:29:18 +0000
+
+base-files (13.8) unstable; urgency=medium
+
+  * Changes for trixie as stable:
+  - Use 13 as version in /etc/issue and /etc/issue.net.
+  - Use 13.0 as version in /etc/debian_version.
+  - Update PRETTY_NAME in os-release, now 13 (trixie).
+  - Add VERSION_ID and VERSION.
+  - Add DEBIAN_VERSION_FULL with the same contents as /etc/debian_version.
+    This is only expected to exist on stable releases. Closes: #931197.
+    Note that this does not change the fundamental fact that "all point
+    releases of trixie are Debian 13". This is just a convenience for
+    tools like ansible who already parse both debian_version and os-release
+    so that in the long term they can parse os-release only.
+  - Update README (trixie -> forky and use 13.x for example version).
+  * Refresh some licenses from ftp.gnu.org. Closes: #1103289.
+  * Set Rules-Requires-Root to no.
+  * Drop obsolete debian/2775-dirs.
+  * Add Vcs-Git and Vcs-Browser fields.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 12 May 2025 21:25:00 +0200
 
 base-files (13.7) unstable; urgency=medium
 
