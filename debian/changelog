@@ -1,4 +1,4 @@
-base-files (13.8+rpi1+deb13u4) trixie-staging; urgency=medium
+base-files (13.8+rpi1+deb13u6) trixie-staging; urgency=medium
 
   [changes brought forward from 8+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:03:42 +0000]
   * Modify default vendor etc for raspbian.
@@ -14,7 +14,19 @@ base-files (13.8+rpi1+deb13u4) trixie-staging; urgency=medium
     code to revert them.
   * Add build-dependency on moreutils to support new code in debian/rules.
 
- -- Raspbian forward porter <root@raspbian.org>  Tue, 17 Mar 2026 20:32:33 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 20 Jul 2026 14:34:45 +0000
+
+base-files (13.8+deb13u6) trixie; urgency=medium
+
+  * Update debian_version and os-release for Debian 13.6 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 04 Jul 2026 11:05:00 +0200
+
+base-files (13.8+deb13u5) trixie; urgency=medium
+
+  * Update debian_version and os-release for Debian 13.5 point release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 08 May 2026 18:10:00 +0200
 
 base-files (13.8+deb13u4) trixie; urgency=medium
 
